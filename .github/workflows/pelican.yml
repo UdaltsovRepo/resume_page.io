@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 on:
+  # Trigger the workflow on push on main branch,
+  push:
+    branches:
+      - main
   workflow_call:
     inputs:
       settings:
