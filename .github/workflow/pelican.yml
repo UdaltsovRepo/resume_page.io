@@ -1,21 +1,5 @@
 name: Deploy to GitHub Pages
 on: [workflow_dispatch]
-workflow_call:
-  inputs:
-    settings:
-      required: true
-      description: "The path to your Pelican settings file (`pelican`'s `--settings` option), for example: 'publishconf.py'"
-      type: string
-    requirements:
-      required: false
-      default: "pelican"
-      description: "The Python requirements to install, for example to enable markdown and typogrify use: 'pelican[markdown] typogrify' or if you have a requirements file use: '-r requirements.txt'"
-      type: string
-    output-path:
-      required: false
-      default: "output/"
-      description: "Where to output the generated files (`pelican`'s `--output` option)"
-      type: string
 permissions:
   contents: read
   pages: write
@@ -37,13 +21,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Install requirements
-        run: pip install ${{ inputs.requirements }}
+        run: pip install "./requirements.txt"
       - name: Build Pelican site
         run: |
           pelican \
-            --settings "${{ inputs.settings }}" \
+            --settings \
             --extra-settings SITEURL='"${{ steps.pages.outputs.base_url }}"' \
-            --output "${{ inputs.output-path }}"
+            --output
       - name: Fix permissions
         run: |
           chmod -c -R +rX "${{ inputs.output-path }}" | while read line; do
@@ -52,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ inputs.output-path }}
+          path: "output"
   deploy:
     environment:
       name: github-pages
