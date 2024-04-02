@@ -1,6 +1,6 @@
 AUTHOR = 'Bogdan Udaltsov'
 SITENAME = "Bogdan's Blog"
-SITEURL = ""
+SITEURL = "https://udaltsovrepo.github.io/resume_page.io"
 
 PATH = "content"
 
@@ -30,11 +30,12 @@ SOCIAL = (
 )
 
 STATIC_PATHS = [
+        "themes",
+        "images",
         ]
-
 THEME = "./themes/resume"
 PIC = "sitelogo.jpeg"
-
+THEME_STATIC_DIR = "theme"
 DEFAULT_PAGINATION = 10
 
 #Profile information
