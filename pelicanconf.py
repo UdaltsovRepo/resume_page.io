@@ -233,12 +233,12 @@ COURSES = [
 
 
 	{
-		'name': 'SystemVerilog Accelerated Verification with UVM v1.2.5 Exam',
+		'name': 'SystemVerilog Accelerated Verification with UVM',
 		'author': 'Cadence Design Systems',
 		'issued': 'Nov 2022'
 	},
 	{
-		'name': 'SystemVerilog for Design and Verification v21.10 Exam',
+		'name': 'SystemVerilog for Design and Verification v21.10',
 		'author': 'Cadence Design Systems',
 		'issued': 'Nov 2022'
 	},
@@ -254,13 +254,13 @@ COURSES = [
 		'issued': 'Mar 2020'
 	},
 	{
-		'name': 'Anti-jamming equipment design (Altium Designer)',
+		'name': 'Anti-jamming equipment design',
 		'author': 'NPF Rodnik',
 		'issued': 'Feb 2018'
 	},
 
 	{
-		'name': 'Circuit design and signal integrity (Altium Designer)',
+		'name': 'Circuit design and signal integrity',
 		'author': 'NPF Rodnik',
 		'issued': 'Feb 2018'
 	},
