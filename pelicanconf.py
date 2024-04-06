@@ -46,13 +46,13 @@ TAGLINE = 'Design Verification Engineer'
 EMAIL = 'udaltsov.en@gmail.com'
 PHONE = '(+48) 721718956'
 WEBSITE = ''
-LINKEDIN = 'https://www.linkedin.com/in/bogdan-udaltsov-024218198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+LINKEDIN = 'bogdan-udaltsov-024218198'
 GITHUB = 'https://bitbucket.org/Bogdan3095/workspace/overview/'
 
 TWITTER = ''
 CSS_FILE = 'main-6.css'
 
-CAREER_SUMMARY = """Posses experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
+CAREER_SUMMARY = """Possess experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
                     Have created qualitative verifications plans, which provided high standarts of the functional verification.
                     Can write testbenches and all verification infrastructure from scratch in SystemVerilog, using UVM methodology.
                     Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire.
