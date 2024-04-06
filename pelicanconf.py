@@ -40,19 +40,30 @@ DEFAULT_PAGINATION = 10
 
 #Profile information
 NAME = 'Bogdan Udaltsov'
-TAGLINE = 'Application engineer'
+TAGLINE = 'Design Verification Engineer'
 
 #sidebar links
 EMAIL = 'udaltsov.en@gmail.com'
 PHONE = '(+48) 721718956'
-WEBSITE = 'empty'
-LINKEDIN = 'empty'
-GITHUB = 'empty'
+WEBSITE = ''
+LINKEDIN = 'https://www.linkedin.com/in/bogdan-udaltsov-024218198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+GITHUB = 'https://bitbucket.org/Bogdan3095/workspace/overview/'
+
 TWITTER = ''
 CSS_FILE = 'main-6.css'
-CAREER_SUMMARY = """Practical and versatile Radio Engineer with work experience on different positions from technician 
-                  to the senior engineer. Providing product from idea to practical realization, with mechanical parts 
-                  and documentary. Adore to acquire new knowledge and solve modern tasks in engineering"""
+
+CAREER_SUMMARY = """Posses experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
+                    Have created qualitative verifications plans, which provided high standarts of the functional verification.
+                    Can write testbenches and all verification infrastructure from scratch in SystemVerilog, using UVM methodology.
+                    Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire.
+                    Have experience in synthesys with conformal analysis of the chip with writting SDC constraints on the design.
+                    Have worked with simulators from leader vendors(Cadence, Synopsys, Mentor) and with its VIPs. CI/CD was performed in Jenkins, or using 
+                    Cadence software, as Vmanager, with vsif scripts. Teamplayer, responsible and attentive to details.
+                    Used to work on a high result. Had mentorship experience for the newcomers, and willinig to share my experience with team, for improving overall quality of 
+                    our work. Constantly impoving my level of competency, by reading technical literature(computer architecture) and articles(DVcon). According to the last,
+                    like to try new technics and observe their advantages/disadvantages.
+                    Ready for interesting projects and new challenges.
+                    """
 
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -80,50 +91,55 @@ SKILLS = [
   	},
 ]
 
-PROJECT_INTRO = 'You can list your side projects or open source libraries in this section. '
+PROJECT_INTRO = ''
 
 PROJECTS = [
     {   
         'position': 'Cadence Design Systems',
 	    'title': "Design and Verification reuse library",
-	    'tagline': """ Hub creation with design reuse modules for different purposes and verification components. Static website with sphinx engine was written with search
-        included(stork-search) and deployed on the github pages.
-        """
+	    'tagline':  """ Hub creation with design reuse modules and verification components for different purposes. 
+                        Static website with sphinx engine was written with search
+                        included(stork-search) and deployed on the github pages.
+                    """
 	},
     {
         'position': 'Cadence Design Systems',
 	    'title': "Memory integration testing",
-	    'tagline': """  Creating verification environment from scratch using uvm-methodology for performing connectivity check of the inner memory modules of
-                        different types. In addition to this task, verification of these memories was added. All envirionment was written, 
-                        according to the way, which was described in the article on the DVCON by Dave Rich form Siemens with abstract interface usage, for avoiding parametrization,
+	    'tagline':  """ Creating verification environment from scratch using uvm-methodology for performing connectivity check of the inner memory modules of
+                        different types. In addition to this task, functional verification feature of memories was added. All envirionment was written, 
+                        according to the way, which was described in the article on the DVCON by Dave Rich form Siemens with abstract interface usage, 
+                        for avoiding parametrization,
                         and full incapsulation of the interface signals. 
-        """
+                    """
 	},
 	{
         'position': 'Cadence Design Systems',
 		'title': "Chip's synthesis",
-		'tagline': """ Performing synthesys of the chip, with advance nodes usage in the Genus software with LEC. Writing SDC constraints for the synthesis.
-                        Prepring scripts for customer for different purposes, such as simulation, synthesis, formal checks, etc.
-        """
+		'tagline':  """ Performing synthesis of the chip, with advance nodes usage in the Genus software with LEC. Writing SDC constraints for the synthesis.
+                        Preparing scripts for customer for different purposes, such as simulation, synthesis, formal checks, etc.
+                    """
 	},
 	{
         'position': 'Cadence Design Systems',
 		'title': 'Soundwire IP integration and verification',
-		'tagline': """Integration of the IP into existing chip from the customer's side and providing verification according to the verification plan and existing 
-        verification environment. All legacy environment was written in an old-fashioned way, so it was rewritten in the UVM. Original testcases were debugged. 
-        For the verification VIP from Cadence was used, and verification was impelemented with legacy code support. 
-        For verification plan was used Vmanager, as for the regression with vsif scripts, simulator was the xcelium.
-        """
+		'tagline':  """ Integration of the IP into existing chip from the customer's side and providing verification according to the verification plan and existing 
+                        verification environment. All legacy environment was written in an old-fashioned way, so it was rewritten in the UVM. 
+                        Original testcases were debugged. 
+                        For the verification VIP from Cadence was used, and verification was impelemented with legacy code support. 
+                        For verification plan was used Vmanager, as for the regression with vsif scripts, simulator was xcelium.
+                    """
 	},
 
 	{
         'position': 'Tecon MT',
 		'title': 'Module Verification',
-		'tagline': """Verification of the company's IP with the custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
-        with multiple modes. Full verification environment was written from scratch, using UVM methodology, according to the verification plan and resoponses from the meetups with the 
-        design team. For AXI4 load was used VIP from Synopsys. At the end it was put on the regress, using Jenkins, 
-        for collecting coverge and it's observation. For verification plan creation and coverage annotation Verdi software was used, simulator was Synopsys VCS.
-        """
+		'tagline':  """ Verification of the company's IP with the custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
+                        with multiple modes. Full verification environment was written from scratch, using UVM methodology, 
+                        according to the verification plan and responses from the meetups with the design team. 
+                        For AXI4 load was used VIP from Synopsys. At the end it was put on the regress, using Jenkins, 
+                        for collecting coverge and it's further observation. For verification plan creation and coverage annotation 
+                        Verdi software was used, simulator was Synopsys VCS.
+                    """
 	},
 
 	{
@@ -155,7 +171,7 @@ PROJECTS = [
                         Various tools for microwave modelling: Microwave CST, Ansys HFSS, Keysight MWO.
                         In the majority Intel Altera FPGAs were used, so Quartus was chosen as software for firmware creation.
                         STM32 were used as top-priority MCs, for its firmwares Eclipse or Coocox IDE. At the end for 
-                        adjuastments and measurements different tools were used from multimeter to spectrum analyzers.
+                        adjustments and measurements different tools were used from multimeter to spectrum analyzers.
         """
 	},
 
@@ -186,8 +202,14 @@ LANGUAGES = [
 
 INTERESTS = [
 	'Programming',
-	'Reading',
-    'Cycling',
+	'SystemVerilog',
+    'UVM',
+    'Functional Verification',
+    'Computer Architecture',
+    'Synthesis',
+    'C',
+    'C++',
+    'Python',
 ]
 
 
@@ -196,27 +218,38 @@ EXPERIENCES = [
 		'job_title': 'Application Engineer',
 		'time': 'Nov 2022 - Present',
 		'company': 'Cadence Design Systems',
+                'details':  """ Providing Design and verification services for inner and customer's use.
+                                In the majority, utilization of the Cadence tools, but it depend's on the customer.
+                                Mentor support for the new employees.
+                            """
 	},
 	{
 		'job_title': "Module verification design engineer",
 		'time': 'Jul 2021 - Aug 2022',
 		'company': 'Tecon MT',
+                'details':  """ 
+                                Module verification of the inner IPs, using Synopsys VCS and AXI VIP.
+                            """
 	},
 	{
 		'job_title': 'Seniour RF design engineer',
 		'time': 'Nov 2014 - Jul 2021',
 		'company': 'Engineering center Era',
+                'details':  """ Developing various equipments from idea to expiremental model. 
+                                Providing microwave simulation and modelling with various tools, 
+                                PCB and mechanical design, adjusting for further putting on stream. 
+                            """
 	}
 ]
 
 EDUCATIONS = [
 	{
-		'degree': 'Masters in Radiotechnics',
+		'degree': 'Masters in Radio Engineering',
 		'meta': 'Moscow Power Engeineering Institute(Technical University)',
 		'time': '2016 - 2020'
 	},
 	{
-		'degree': 'B.E in Radiotechnics',
+		'degree': 'B.E in Radio Engineering',
 		'meta': 'Moscow State Institute of Radio Engineering, Electronics and Automation (Technical University)',
 		'time': '2012 - 2016'
 	},
@@ -264,6 +297,4 @@ COURSES = [
 		'author': 'NPF Rodnik',
 		'issued': 'Feb 2018'
 	},
-
-
 ]

@@ -5,12 +5,14 @@
         <div class="item">
             <div class="meta">
                 <div class="upper-row">
-                    <h4 class="degree">{{ experience['job_title'] }}</h4>
-                    <div class="info">{{ experience['company'] }}</div>
-                    <p> </p>
-	                  <h5 class="time">{{ experience['time'] }}</h5>
+                    <h4 class="name">{{ experience['job_title'] }}</h4>
+                    <h5 class="time">{{ experience['time'] }}</h5>
                 </div><!--//upper-row-->
+                <h5 class="position">{{ experience['company'] }}</h5>
             </div><!--//meta-->
+            <div class="details">
+                <p>{{ experience['details'] }}</p>
+            </div><!--//details-->
         </div><!--//item-->
     {% endfor %}
 </section><!--//section-->
