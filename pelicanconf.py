@@ -37,24 +37,21 @@ THEME_STATIC_DIR = "theme"
 DEFAULT_PAGINATION = 10
 
 #Profile information
-NAME = 'Bogdan Udaltsov'
-TAGLINE = 'Design Verification Engineer'
+NAME                = 'Bogdan Udaltsov'
+TAGLINE             = 'Design Verification Engineer'
+CURRENT_LOCATION    = 'Poland, Siemianowice Slaskie' 
 
 #sidebar links
 EMAIL = 'udaltsov.en@gmail.com'
 PHONE = '(+48) 721718956'
 WEBSITE = ''
 LINKEDIN = 'bogdan-udaltsov-024218198'
-GITHUB = 'https://bitbucket.org/Bogdan3095/workspace/overview/'
+GITHUB = 'https://bitbucket.org/Bogdan3095'
+TYPE_OF_COMM = "Email, Messangers"
+
 
 TWITTER = ''
 CSS_FILE = 'main-6.css'
-
-
-
-PDF_STYLE = ""
-PDF_STYLE_PATH = ""
-
 
 CAREER_SUMMARY = """Possess experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
                     Have created qualitative verifications plans, which provided high standards of the functional verification.
@@ -97,6 +94,25 @@ SKILLS = [
 PROJECT_INTRO = ''
 
 PROJECTS = [
+    {   
+        'position': 'Cadence Design Systems',
+	    'title': "Verification pacakges and open-source libs integration",
+	    'tagline':  """ 
+                        Creation of the verification libraries for the future reusability in the projects.
+                        Observing and adoption of the open-source tools for common usage with Cadence tools.
+                        Creating new methodology for the acceleration of the simulation;
+                    """
+	},
+    {   
+        'position': 'Cadence Design Systems',
+	    'title': "AXI4L2APB4 bridge",
+	    'tagline':  """ 
+                        Design and verification of the module for the future use in the various project.
+                        Full design and verification cycle. Code lining for RTL was done with Jasper tools, 
+                        regress and coverage annotation into the verification plan was done in the vManager, with
+                        vsif files support. Vor the verification purposes various VIPs from VIPCAT were used.
+                    """
+	},
     {   
         'position': 'Cadence Design Systems',
 	    'title': "Design and Verification reuse library",
@@ -213,21 +229,34 @@ INTERESTS = [
     'C',
     'C++',
     'Python',
+    'SvUnit',
+    'Natural Docs',
+    'Sphinx',
 ]
 
 
 EXPERIENCES = [
 	{
-		'job_title': 'Application Engineer',
-		'time': 'Nov 2022 - Present',
+		'job_title': 'Senior Application Engineer',
+		'time': 'July 2024 - Present',
 		'company': 'Cadence Design Systems',
-                'details':  """ Providing Design and verification services for inner and customer's use.
-                                In the majority, utilization of the Cadence tools, but it depend's on the customer.
+                'details':  """ 
+                                Creating a new methodologies for customers and inner use, 
+                                according to the provided task.
+                                Providing Design and verification services.
                                 Mentor support for the new employees.
                             """
 	},
 	{
-		'job_title': "Module verification design engineer",
+		'job_title': 'Application Engineer',
+		'time': 'Nov 2022 - June 2024',
+		'company': 'Cadence Design Systems',
+                'details':  """ Providing Design and verification services for inner and customer's use.
+                                In the majority, utilization of the Cadence tools, but it depend's on the customer.
+                            """
+	},
+	{
+		'job_title': "Module Verification Design Engineer",
 		'time': 'Jul 2021 - Aug 2022',
 		'company': 'Tecon MT',
                 'details':  """ 
@@ -235,7 +264,7 @@ EXPERIENCES = [
                             """
 	},
 	{
-		'job_title': 'Senior RF design engineer',
+		'job_title': 'Senior RF Design Engineer',
 		'time': 'Nov 2014 - Jul 2021',
 		'company': 'Engineering center Era',
                 'details':  """ Developing various equipments from idea to experimental model. 

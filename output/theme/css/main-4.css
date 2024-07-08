@@ -60,7 +60,7 @@ p {
   background: #A15277;
   position: absolute;
   right: 0;
-  width: 240px;
+  width: 280px;
   height: 100%;
   min-height: 800px;
   color: #fff;
@@ -102,7 +102,7 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .contact-list .email .fa {
-  font-size: 14px;
+  font-size: 12px;
 }
 .sidebar-wrapper .container-block {
   padding: 30px;

@@ -5,6 +5,7 @@
         <img class="profile-img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{% if PIC %}{{ PIC }}{% else %}profile.png{% endif %}" alt="profile picture" />
         <h1 class="name">{% if NAME %}{{NAME}}{% else %}Alan Doe{% endif %}</h1>
         <h3 class="tagline">{% if TAGLINE %}{{TAGLINE}}{% else %}Full Stack Developer{% endif %}</h3>
+        <h3 class="tagline"> Current location: {% if  CURRENT_LOCATION %}{{CURRENT_LOCATION}}{% else %} Russia, Moscow{% endif %} </h3>
     </div><!--//profile-container-->
     
     <div class="contact-container container-block">
@@ -25,6 +26,8 @@
             {% if GITHUB %}
             <li class="github"><i class="fa fa-github"></i><a href="{{GITHUB}}" target="_blank">{{GITHUB}}</a></li>
             {% endif %}
+
+            <li class="email"> Type of communication: {{TYPE_OF_COMM}} </li>
         </ul>
     </div><!--//contact-container-->
 
