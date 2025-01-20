@@ -22,7 +22,24 @@
     <meta name="author" content="Bogdan Udaltsov" />
     <meta name="description" content="" />
     <title>Bogdan's Blog</title>
+    <script> 
+      function copyURI(evt) {
+          evt.preventDefault();
+          navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
+            //print on console
+            setTimeout(function(){ //using setTimeout function
+              document.getElementById('printHere').style.display ='none';
+              document.getElementById('printHere').innerHTML = "";
+              document.getElementById('printHere').style.display ='inline'
+            }
+            ,300); 
+            document.getElementById('printHere').innerHTML = "Copied";
 
+          }, () => {
+            /* clipboard write failed */
+          });
+      }
+    </script>
 </head>
 
 <body id="index" class="home">
@@ -35,22 +52,37 @@
     <div class="profile-container">
         <img class="profile-img" src="https://udaltsovrepo.github.io/resume_page.io/theme/images/sitelogo.jpeg" alt="profile picture" />
         <h1 class="name">Bogdan Udaltsov</h1>
-        <h3 class="tagline">Design Verification Engineer</h3>
+        <h3 class="tagline">Senior Application Engineer</h3>
         <h3 class="tagline"> Current location: Poland, Siemianowice Slaskie </h3>
     </div><!--//profile-container-->
     
     <div class="contact-container container-block">
         <ul class="list-unstyled contact-list">
-           
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: udaltsov.en@gmail.com">udaltsov.en@gmail.com</a></li>
+           <li class="email visible-print-block"><b>Email:</b> <p>udaltsov.en@gmail.com</p></li>
+            <li class="email no-print">
+              <i class="fa fa-envelope no-print">
+                <button class="no-print" style="background-color: transparent;"
+                  <a href="udaltsov.en@gmail.com" onclick="copyURI(event)"></a>
+                  Copy email</button>
+                  <i class="no-print" id="printHere"></i>
+              </i>
+            </li>
             
-            <li class="phone"><i class="fa fa-phone"></i><a href="tel:(+48) 721718956">(+48) 721718956</a></li>
+            <li class="phone visible-print-block"><b>Phone:</b> <p>(+48) 721718956</p></li>
+            <li class="phone no-print"><i class="fa fa-phone"></i><a href="(+48) 721718956">(+48) 721718956</a></li>
             
-            <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/bogdan-udaltsov-024218198" target="_blank">linkedin.com/in/bogdan-udaltsov-024218198</a></li>
+            <li class="linkedin visible-print-block"><b>LinkedIn:</b> <p>bogdan-udaltsov-024218198</p></li>
+            <li class="linkedin no-print"><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/bogdan-udaltsov-024218198" target="_blank">bogdan-udaltsov-024218198</a></li>
             
-            <li class="github"><i class="fa fa-github"></i><a href="https://bitbucket.org/Bogdan3095" target="_blank">https://bitbucket.org/Bogdan3095</a></li>
+            <li class="github visible-print-block"><b>BitBucket:</b> <p>https://bitbucket.org/Bogdan3095</p></li>
+            <li class="github no-print"><i class="fa fa-github"></i><a href="https://bitbucket.org/Bogdan3095" target="_blank">https://bitbucket.org/Bogdan3095</a></li>
 
-            <li class="email"> Type of communication: Email, Messangers </li>
+            <li class="email no-print"> <i class="fa fa-whatsapp" ></i>Type of communication: Email, Messengers </li>
+
+            <li class="email visible-print-block"><b>Type of communication:</b> <p>Email, Messengers</p> </li>
+
+            <li class="email no-print"><i class="fa fa-floppy-o"></i><a href="./pdf/budaltso_resume.pdf" target="_blank">Get PDF</a></li>
+
         </ul>
     </div><!--//contact-container-->
 
@@ -78,6 +110,10 @@
 		   <li>SvUnit</li>
 		   <li>Natural Docs</li>
 		   <li>Sphinx</li>
+		   <li>PCIe</li>
+		   <li>Soundwire</li>
+		   <li>APB</li>
+		   <li>AXI</li>
 	</ul>
 </div><!--//interests-->
 </div><!--//sidebar-wrapper-->    <div class="main-wrapper">
@@ -86,16 +122,16 @@
 <h2 class="section-title"><i class="fa fa-user"></i>About me</h2>
 <div class="summary">
     <p>Possess experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
-                    Have created qualitative verifications plans, which provided high standards of the functional verification.
+                    Had created qualitative verifications plans, which provided high standards of the functional verification.
                     Can write testbenches and all verification infrastructure from scratch in SystemVerilog, using UVM methodology.
-                    Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire.
+                    Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire. Also possess knowledge of PCIe Gen5.
                     Have experience in synthesis with conformal analysis of the chip with writing SDC constraints on the design.
                     Have worked with simulators from leader vendors(Cadence, Synopsys, Mentor) and with its VIPs. CI/CD was performed in Jenkins, or using 
                     Cadence software, as Vmanager, with vsif scripts. Teamplayer, responsible and attentive to details.
                     Used to work on a high result. Had mentorship experience for the newcomers, and willinig to share my experience with team, for improving overall quality of 
                     our work. Constantly impoving my level of competency, by reading technical literature(computer architecture) and articles(DVcon). According to the last,
                     like to try new technics and observe their advantages/disadvantages.
-                    Ready for interesting projects and new challenges.
+                    Ready for the interesting projects and new challenges.
                     </p>
 </div><!--//summary-->
 </section><!--//section-->
@@ -193,11 +229,23 @@
         <div class="item">
           <div class="meta">
             <div class="upper-row">
-              <h4 class="degree"> Verification pacakges and open-source libs integration</h4>
+              <h4 class="degree"> PCIe IP integaration and Verification</h4>
+              <h5 class="position">Cadence Design Systems</h5>
+              <div class="info"> 
+                    Creation of the PCIe Gen5 subsystem, according to the customer needs, by integration inner IPs and providing addiotional
+                    design stuff, with further verification and synthesis tasks.
+                    </div>
+            </div><!--//item-->
+          </div><!--//item-->
+        </div><!--//item-->
+        <div class="item">
+          <div class="meta">
+            <div class="upper-row">
+              <h4 class="degree"> Verification packages and open-source libs integration</h4>
               <h5 class="position">Cadence Design Systems</h5>
               <div class="info"> 
                         Creation of the verification libraries for the future reusability in the projects.
-                        Observing and adoption of the open-source tools for common usage with Cadence tools.
+                        Observing and adoption of the open-source tools for further use with Cadence tools.
                         Creating new methodology for the acceleration of the simulation;
                     </div>
             </div><!--//item-->
@@ -209,10 +257,10 @@
               <h4 class="degree"> AXI4L2APB4 bridge</h4>
               <h5 class="position">Cadence Design Systems</h5>
               <div class="info"> 
-                        Design and verification of the module for the future use in the various project.
-                        Full design and verification cycle. Code lining for RTL was done with Jasper tools, 
+                        Design and verification of the inner module for further use in the various projects.
+                        Full design and verification cycle. Code linting for RTL was done with Jasper tools, 
                         regress and coverage annotation into the verification plan was done in the vManager, with
-                        vsif files support. Vor the verification purposes various VIPs from VIPCAT were used.
+                        vsif files support. For the verification purposes various VIPs from VIPCAT were used.
                     </div>
             </div><!--//item-->
           </div><!--//item-->
@@ -224,7 +272,7 @@
               <h5 class="position">Cadence Design Systems</h5>
               <div class="info"> Hub creation with design reuse modules and verification components for different purposes. 
                         Static website with sphinx engine was written with search
-                        included(stork-search) and deployed on the github pages.
+                        included(stork-search) and deployed on the Github pages.
                     </div>
             </div><!--//item-->
           </div><!--//item-->
@@ -234,11 +282,10 @@
             <div class="upper-row">
               <h4 class="degree"> Memory integration testing</h4>
               <h5 class="position">Cadence Design Systems</h5>
-              <div class="info"> Creating verification environment from scratch using uvm-methodology for performing connectivity check of the inner memory modules of
-                        different types. In addition to this task, functional verification feature of memories was added. All environment was written, 
+              <div class="info"> Creating verification environment from scratch using uvm-methodology for performing synthesised memory modules of different types 
+                        connectivity check and its  verification. All environment was written, 
                         according to the way, which was described in the article on the DVCON by Dave Rich form Siemens with abstract interface usage, 
-                        for avoiding parametrization,
-                        and full incapsulation of the interface signals. 
+                        for avoiding parametrization, and full incapsulation of the interface signals. 
                     </div>
             </div><!--//item-->
           </div><!--//item-->
@@ -273,7 +320,7 @@
             <div class="upper-row">
               <h4 class="degree"> Module Verification</h4>
               <h5 class="position">Tecon MT</h5>
-              <div class="info"> Verification of the company's IP with the custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
+              <div class="info"> Verification of the company's IP with its custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
                         with multiple modes. Full verification environment was written from scratch, using UVM methodology, 
                         according to the verification plan and responses from the meetups with the design team. 
                         For AXI4 load was used VIP from Synopsys. At the end it was put on the regress, using Jenkins, 

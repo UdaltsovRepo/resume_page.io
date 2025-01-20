@@ -10,24 +10,39 @@
     
     <div class="contact-container container-block">
         <ul class="list-unstyled contact-list">
-           
            {% if EMAIL %}
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{EMAIL}}">{{EMAIL}}</a></li>
+           <li class="email visible-print-block"><b>Email:</b> <p>{{EMAIL}}</p></li>
+            <li class="email no-print">
+              <i class="fa fa-envelope no-print">
+                <button class="no-print" style="background-color: transparent;"
+                  <a href="{{EMAIL}}" onclick="copyURI(event)"></a>
+                  Copy email</button>
+                  <i class="no-print" id="printHere"></i>
+              </i>
+            </li>
             {% endif %}
             
             {% if PHONE %}
-            <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li class="phone visible-print-block"><b>Phone:</b> <p>{{PHONE}}</p></li>
+            <li class="phone no-print"><i class="fa fa-phone"></i><a href="{{PHONE}}">{{PHONE}}</a></li>
             {% endif %}
             
             {% if LINKEDIN %}
-            <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/{{LINKEDIN}}" target="_blank">linkedin.com/in/{{LINKEDIN}}</a></li>
+            <li class="linkedin visible-print-block"><b>LinkedIn:</b> <p>{{LINKEDIN}}</p></li>
+            <li class="linkedin no-print"><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/{{LINKEDIN}}" target="_blank">{{LINKEDIN}}</a></li>
             {% endif %}
             
             {% if GITHUB %}
-            <li class="github"><i class="fa fa-github"></i><a href="{{GITHUB}}" target="_blank">{{GITHUB}}</a></li>
+            <li class="github visible-print-block"><b>BitBucket:</b> <p>{{GITHUB}}</p></li>
+            <li class="github no-print"><i class="fa fa-github"></i><a href="{{GITHUB}}" target="_blank">{{GITHUB}}</a></li>
             {% endif %}
 
-            <li class="email"> Type of communication: {{TYPE_OF_COMM}} </li>
+            <li class="email no-print"> <i class="fa fa-whatsapp" ></i>Type of communication: {{TYPE_OF_COMM}} </li>
+
+            <li class="email visible-print-block"><b>Type of communication:</b> <p>{{TYPE_OF_COMM}}</p> </li>
+
+            <li class="email no-print"><i class="fa fa-floppy-o"></i><a href="./pdf/budaltso_resume.pdf" target="_blank">Get PDF</a></li>
+
         </ul>
     </div><!--//contact-container-->
 

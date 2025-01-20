@@ -1,3 +1,6 @@
+from pelican.plugins import pdf
+
+
 AUTHOR = 'Bogdan Udaltsov'
 SITENAME = "Bogdan's Blog"
 SITEURL = "https://udaltsovrepo.github.io/resume_page.io"
@@ -38,7 +41,7 @@ DEFAULT_PAGINATION = 10
 
 #Profile information
 NAME                = 'Bogdan Udaltsov'
-TAGLINE             = 'Design Verification Engineer'
+TAGLINE             = 'Senior Application Engineer'
 CURRENT_LOCATION    = 'Poland, Siemianowice Slaskie' 
 
 #sidebar links
@@ -47,23 +50,23 @@ PHONE = '(+48) 721718956'
 WEBSITE = ''
 LINKEDIN = 'bogdan-udaltsov-024218198'
 GITHUB = 'https://bitbucket.org/Bogdan3095'
-TYPE_OF_COMM = "Email, Messangers"
+TYPE_OF_COMM = "Email, Messengers"
 
 
 TWITTER = ''
 CSS_FILE = 'main-6.css'
 
 CAREER_SUMMARY = """Possess experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties.
-                    Have created qualitative verifications plans, which provided high standards of the functional verification.
+                    Had created qualitative verifications plans, which provided high standards of the functional verification.
                     Can write testbenches and all verification infrastructure from scratch in SystemVerilog, using UVM methodology.
-                    Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire.
+                    Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire. Also possess knowledge of PCIe Gen5.
                     Have experience in synthesis with conformal analysis of the chip with writing SDC constraints on the design.
                     Have worked with simulators from leader vendors(Cadence, Synopsys, Mentor) and with its VIPs. CI/CD was performed in Jenkins, or using 
                     Cadence software, as Vmanager, with vsif scripts. Teamplayer, responsible and attentive to details.
                     Used to work on a high result. Had mentorship experience for the newcomers, and willinig to share my experience with team, for improving overall quality of 
                     our work. Constantly impoving my level of competency, by reading technical literature(computer architecture) and articles(DVcon). According to the last,
                     like to try new technics and observe their advantages/disadvantages.
-                    Ready for interesting projects and new challenges.
+                    Ready for the interesting projects and new challenges.
                     """
 
 
@@ -96,10 +99,18 @@ PROJECT_INTRO = ''
 PROJECTS = [
     {   
         'position': 'Cadence Design Systems',
-	    'title': "Verification pacakges and open-source libs integration",
+	    'title': "PCIe IP integaration and Verification",
+	    'tagline':  """ 
+                    Creation of the PCIe Gen5 subsystem, according to the customer needs, by integration inner IPs and providing addiotional
+                    design stuff, with further verification and synthesis tasks.
+                    """
+	},
+    {   
+        'position': 'Cadence Design Systems',
+	    'title': "Verification packages and open-source libs integration",
 	    'tagline':  """ 
                         Creation of the verification libraries for the future reusability in the projects.
-                        Observing and adoption of the open-source tools for common usage with Cadence tools.
+                        Observing and adoption of the open-source tools for further use with Cadence tools.
                         Creating new methodology for the acceleration of the simulation;
                     """
 	},
@@ -107,10 +118,10 @@ PROJECTS = [
         'position': 'Cadence Design Systems',
 	    'title': "AXI4L2APB4 bridge",
 	    'tagline':  """ 
-                        Design and verification of the module for the future use in the various project.
-                        Full design and verification cycle. Code lining for RTL was done with Jasper tools, 
+                        Design and verification of the inner module for further use in the various projects.
+                        Full design and verification cycle. Code linting for RTL was done with Jasper tools, 
                         regress and coverage annotation into the verification plan was done in the vManager, with
-                        vsif files support. Vor the verification purposes various VIPs from VIPCAT were used.
+                        vsif files support. For the verification purposes various VIPs from VIPCAT were used.
                     """
 	},
     {   
@@ -118,17 +129,16 @@ PROJECTS = [
 	    'title': "Design and Verification reuse library",
 	    'tagline':  """ Hub creation with design reuse modules and verification components for different purposes. 
                         Static website with sphinx engine was written with search
-                        included(stork-search) and deployed on the github pages.
+                        included(stork-search) and deployed on the Github pages.
                     """
 	},
     {
         'position': 'Cadence Design Systems',
 	    'title': "Memory integration testing",
-	    'tagline':  """ Creating verification environment from scratch using uvm-methodology for performing connectivity check of the inner memory modules of
-                        different types. In addition to this task, functional verification feature of memories was added. All environment was written, 
+	    'tagline':  """ Creating verification environment from scratch using uvm-methodology for performing synthesised memory modules of different types 
+                        connectivity check and its  verification. All environment was written, 
                         according to the way, which was described in the article on the DVCON by Dave Rich form Siemens with abstract interface usage, 
-                        for avoiding parametrization,
-                        and full incapsulation of the interface signals. 
+                        for avoiding parametrization, and full incapsulation of the interface signals. 
                     """
 	},
 	{
@@ -152,7 +162,7 @@ PROJECTS = [
 	{
         'position': 'Tecon MT',
 		'title': 'Module Verification',
-		'tagline':  """ Verification of the company's IP with the custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
+		'tagline':  """ Verification of the company's IP with its custom protocol. IP is an converter from one kind of traffic into AXI4 traffic 
                         with multiple modes. Full verification environment was written from scratch, using UVM methodology, 
                         according to the verification plan and responses from the meetups with the design team. 
                         For AXI4 load was used VIP from Synopsys. At the end it was put on the regress, using Jenkins, 
@@ -232,6 +242,10 @@ INTERESTS = [
     'SvUnit',
     'Natural Docs',
     'Sphinx',
+    'PCIe',
+    "Soundwire",
+    "APB",
+    "AXI"
 ]
 
 
@@ -330,3 +344,5 @@ COURSES = [
 		'issued': 'Feb 2018'
 	},
 ]
+
+PLUGINS = [pdf,]
