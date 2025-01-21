@@ -42,7 +42,7 @@ DEFAULT_PAGINATION = 10
 #Profile information
 NAME                = 'Bogdan Udaltsov'
 TAGLINE             = 'Senior Application Engineer'
-CURRENT_LOCATION    = 'Poland, Siemianowice Slaskie' 
+CURRENT_LOCATION    = 'Poland, Katowice' 
 
 #sidebar links
 EMAIL = 'udaltsov.en@gmail.com'
