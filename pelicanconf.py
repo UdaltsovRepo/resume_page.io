@@ -35,7 +35,7 @@ SOCIAL = (
 STATIC_PATHS = [
         ]
 THEME = "./themes/resume"
-PIC = "sitelogo.jpeg"
+PIC = "my_new_logo.jpeg"
 THEME_STATIC_DIR = "theme"
 DEFAULT_PAGINATION = 10
 
