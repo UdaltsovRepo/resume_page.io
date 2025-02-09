@@ -40,7 +40,7 @@ THEME_STATIC_DIR = "theme"
 DEFAULT_PAGINATION = 10
 
 #Profile information
-NAME                = 'Bogdan Udaltsov'
+NAME                = 'Bahdan Udaltsou'
 TAGLINE             = 'Senior Application Engineer'
 CURRENT_LOCATION    = 'Poland, Katowice' 
 
@@ -57,17 +57,18 @@ TWITTER = ''
 CSS_FILE = 'main-6.css'
 
 CAREER_SUMMARY = """
-                    Possess experience of verification various IPs(traffic convertors, audio, memory subsystems) of different difficulties. 
-                    Had created qualitative verification plans, which provided high standards of the functional verification. 
+                    Have knowledge of various IPs(traffic convertors, audio, memory subsystems) verification.
+                    Had created qualitative verification plans, according to the spec. requirements, which provided high standards of the functional verification. 
                     Can write testbenches and all verification infrastructure from scratch in SystemVerilog, using UVM methodology. 
                     Familiar with basic protocols, such as AMBA APB4, AXI, UART, SPI, I2C, MIPI SoundWire. 
                     Also possess knowledge of PCIe Gen5. 
-                    Have experience in synthesis with conformal analysis of the chip with writing SDC constraints on the design. 
-                    Have worked with simulators from big three (Cadence, Synopsys, Mentor) and with its VIPs. CI/CD was performed in Jenkins, or using Cadence software, as vManager, with vsif scripts. 
+                    Have experience in synthesis with conformal analysis of the chip with writing SDC constraints for the design. 
+                    Have worked with simulators from big three (Cadence, Synopsys, Mentor) and with its VIPs. CI/CD was performed in Jenkins, or using Cadence software, 
+                    as vManager, with vsif scripts. 
                     Team-player, responsible and attentive to details. Work on a high result. 
-                    Had mentorship experience for the newcomers, and willing to share my experience with team, for improving overall quality of work. 
+                    Had mentorship experience for the newcomers, and willing to share my experience with the team, for improving overall quality of work. 
                     Constantly improving my level of competency, by reading technical literature(computer architecture) and articles(DVcon). 
-                    According to the last, like to try new technics and observe their advantages/disadvantages. 
+                    According to the last one, like to try new technics and observe their advantages/disadvantages. 
                     Ready for the interesting projects and new challenges. 
                 """
 
@@ -102,8 +103,10 @@ PROJECTS = [
         'position': 'Cadence Design Systems',
 	    'title': "PCIe IP integaration and Verification",
 	    'tagline':  """ 
-                    Creation of the PCIe Gen5 subsystem, according to the customer needs, by integration inner IPs and providing addiotional
-                    design stuff, with further verification and synthesis tasks.
+                    Creation of the PCIe Gen5 subsystem, according to the customer needs, by integration inner IPs and providing additional
+                    design stuff, with further verification and synthesis tasks. Responsible for the design of the inner modules for 
+                    the interrupts and for the verification environment with RAL. RAL is performed by the reg_verifier with advanced prediction 
+                    for set of registers.
                     """
 	},
     {   
@@ -237,7 +240,7 @@ INTERESTS = [
     'Natural Docs',
     'Sphinx',
     'PCIe',
-    "Soundwire",
+    "MIPI Soundwire",
     "APB",
     "AXI"
 ]
